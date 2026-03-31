@@ -49,7 +49,7 @@ Próximo passo: <br>
 👉 Evoluir para múltiplos exames por laudo (ex: DiagnosticReport) <br>
 👉 Aplicar validação de profiles RNDS <br>
 👉 Validação de token <br>
-👉 Versionamento e governança de dados clínicos 
+👉 Versionamento e governança de dados clínicos <br>
 👉 Implementation Guides (Profiles)
 
 
