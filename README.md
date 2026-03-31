@@ -8,7 +8,7 @@ Nos últimos dias montei um fluxo completo de integração focado em interoperab
 
 🔗 Arquitetura construída:
 
-* PostgreSQL → origem dos exames laboratoriais
+* PostgreSQL → origem do exame laboratorial
 * API Node.js → endpoint de publicação (/publish)
 * Kafka → mensageria assíncrona
 * Consumer → processamento dos dados
@@ -31,10 +31,11 @@ Nos últimos dias montei um fluxo completo de integração focado em interoperab
 * Uso de meta.profile (ex: BRResultadoExameLaboratorial)
 * Relacionamento correto entre recursos via urn:uuid
 
-📊 Resultado:
-✔ Dados trafegando ponta a ponta
-✔ Recursos persistidos no FHIR
-✔ Pipeline assíncrono funcional
+📊 Resultado: <br>
+
+✔ Dados trafegando ponta a ponta <br>
+✔ Recursos persistidos no FHIR <br>
+✔ Pipeline assíncrono funcional <br>
 ✔ Estrutura pronta para evolução real (RNDS / produção)
 
 💡 Esse tipo de arquitetura é base para:
@@ -43,12 +44,13 @@ Nos últimos dias montei um fluxo completo de integração focado em interoperab
 * Envio de exames laboratoriais
 * Plataformas de interoperabilidade em saúde
 
-Próximo passo:
-👉 Evoluir para múltiplos exames por laudo (ex: DiagnosticReport)
-👉 Aplicar validação de profiles RNDS
-👉 Validação de token
-👉 Versionamento e governança de dados clínicos
+Próximo passo: <br>
+
+👉 Evoluir para múltiplos exames por laudo (ex: DiagnosticReport) <br>
+👉 Aplicar validação de profiles RNDS <br>
+👉 Validação de token <br>
+👉 Versionamento e governança de dados clínicos 
 
 
-
+<br><br><br><br>
 #FHIR #Kafka #NodeJS #Interoperabilidade #SaudeDigital #RNDS #HL7 #DataEngineering #SoftwareArchitecture
