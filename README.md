@@ -26,7 +26,7 @@ Nos últimos dias montei um fluxo completo de integração focado em interoperab
 🧠 Destaques técnicos:
 
 * Uso de Kafka para desacoplamento e escalabilidade
-* Implementação de Bundle transaction (padrão saúde)
+* Implementação de Bundle transaction (padrão em saúde digital)
 * Mapeamento para FHIR com estrutura compatível com RNDS
 * Uso de meta.profile (ex: BRResultadoExameLaboratorial)
 * Relacionamento correto entre recursos via urn:uuid
@@ -52,5 +52,5 @@ Próximo passo: <br>
 👉 Versionamento e governança de dados clínicos 
 
 
-<br><br><br><br>
+<br><br><br>
 #FHIR #Kafka #NodeJS #Interoperabilidade #SaudeDigital #RNDS #HL7 #DataEngineering #SoftwareArchitecture
