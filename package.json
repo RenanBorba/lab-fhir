@@ -1,0 +1,19 @@
+{
+  "name": "lab-fhir-example",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "axios": "^1.14.0",
+    "expres": "^0.0.5",
+    "express": "^5.2.1",
+    "kafkajs": "^2.2.4",
+    "pg": "^8.20.0"
+  }
+}
