@@ -9,9 +9,9 @@ Nos últimos dias montei um fluxo completo de integração focado em interoperab
 🔗 Arquitetura construída:
 
 * PostgreSQL → origem do exame laboratorial
-* API Node.js → endpoint de publicação (/publish)
+* API Node.js (Express) → endpoint de publicação (/publish)
 * Kafka → mensageria assíncrona
-* Consumer → processamento dos dados
+* Consumer (Axios) → processamento dos dados
 * HAPI FHIR → persistência no padrão HL7 FHIR
 
 📦 O que o pipeline faz:
