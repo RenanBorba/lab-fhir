@@ -50,6 +50,7 @@ Próximo passo: <br>
 👉 Aplicar validação de profiles RNDS <br>
 👉 Validação de token <br>
 👉 Versionamento e governança de dados clínicos 
+👉 Implementation Guides (Profiles)
 
 
 <br><br><br>
