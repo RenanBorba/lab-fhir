@@ -22,6 +22,7 @@ Nos últimos dias montei um fluxo completo de integração focado em interoperab
 4. Gera um Bundle do tipo transaction
 5. Envia tudo para o servidor FHIR
 6. Cria Patient + Observation automaticamente
+7. Evita duplicidade por CPF
 
 🧠 Destaques técnicos:
 
