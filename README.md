@@ -34,7 +34,7 @@ Nos últimos dias montei um fluxo completo de integração focado em interoperab
 📊 Resultado: <br>
 
 ✔ Dados trafegando ponta a ponta <br>
-✔ Recursos persistidos no FHIR <br>
+✔ Recursos persistidos em FHIR <br>
 ✔ Pipeline assíncrono funcional <br>
 ✔ Estrutura pronta para evolução real (RNDS / produção)
 
