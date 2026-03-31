@@ -64,9 +64,9 @@ function toFHIRBundle(data) {
         resource: patient,
         request: {
           method: "POST",
-          url: "Patient"
+          url: "Patient",
           // Evita duplicidade por CPF, cria apenas se não existir
-          //,ifNoneExist: `identifier=http://www.saude.gov.br/fhir/r4/NamingSystem/cpf|${data.paciente_cpf}`
+          ifNoneExist: `identifier=http://www.saude.gov.br/fhir/r4/NamingSystem/cpf|${data.paciente_cpf}`
         }
       },
       {
