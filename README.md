@@ -1,1 +1,54 @@
-# lab-fhir
+# 🔥 Exemplo de Pipeline HL7 FHIR + Kafka + Node.js
+
+🚀 Pipeline FHIR + Kafka + Node.js na prática (do zero ao funcionamento real)
+
+<img width="440" height="310" alt="Image" src="https://github.com/user-attachments/assets/6ca54fc7-e8d4-4887-8cbb-1bd3572955b2" />
+
+Nos últimos dias montei um fluxo completo de integração focado em interoperabilidade em saúde — saindo do dado bruto até um servidor FHIR.
+
+🔗 Arquitetura construída:
+
+* PostgreSQL → origem dos exames laboratoriais
+* API Node.js → endpoint de publicação (/publish)
+* Kafka → mensageria assíncrona
+* Consumer → processamento dos dados
+* HAPI FHIR → persistência no padrão HL7 FHIR
+
+📦 O que o pipeline faz:
+
+1. Consulta exames no banco
+2. Publica mensagens no Kafka
+3. Consumer transforma os dados
+4. Gera um Bundle do tipo transaction
+5. Envia tudo para o servidor FHIR
+6. Cria Patient + Observation automaticamente
+
+🧠 Destaques técnicos:
+
+* Uso de Kafka para desacoplamento e escalabilidade
+* Implementação de Bundle transaction (padrão saúde)
+* Mapeamento para FHIR com estrutura compatível com RNDS
+* Uso de meta.profile (ex: BRResultadoExameLaboratorial)
+* Relacionamento correto entre recursos via urn:uuid
+
+📊 Resultado:
+✔ Dados trafegando ponta a ponta
+✔ Recursos persistidos no FHIR
+✔ Pipeline assíncrono funcional
+✔ Estrutura pronta para evolução real (RNDS / produção)
+
+💡 Esse tipo de arquitetura é base para:
+
+* Integração LIS ↔ HIS
+* Envio de exames laboratoriais
+* Plataformas de interoperabilidade em saúde
+
+Próximo passo:
+👉 Evoluir para múltiplos exames por laudo (ex: DiagnosticReport)
+👉 Aplicar validação de profiles RNDS
+👉 Validação de token
+👉 Versionamento e governança de dados clínicos
+
+
+
+#FHIR #Kafka #NodeJS #Interoperabilidade #SaudeDigital #RNDS #HL7 #DataEngineering #SoftwareArchitecture
