@@ -25,6 +25,7 @@ Nos últimos dias montei um fluxo completo de integração focado em interoperab
 
 🧠 Destaques técnicos:
 
+* Conteinerização com Docker
 * Uso de Kafka para desacoplamento e escalabilidade
 * Implementação de Bundle transaction (padrão em saúde digital)
 * Mapeamento para FHIR com estrutura compatível com RNDS
