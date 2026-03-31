@@ -1,5 +1,6 @@
 // src/utils/mapper.js
 function toFHIR(data) {
+    // Recurso Patient
     const patient = {
         resourceType: "Patient",
         identifier: [
@@ -11,6 +12,7 @@ function toFHIR(data) {
         name: [{ text:data.paciente_nome }],
       };
     
+    // Recurso Observation (resultado do exame)
     const observation = {
         resourceType: "Observation",
         status: "final",

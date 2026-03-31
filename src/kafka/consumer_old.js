@@ -12,13 +12,13 @@ const runConsumer = async () => {
   await consumer.run({
     eachMessage: async ({ message }) => {
       try {
-        // 1. Ler mensagem
+        // Ler mensagem
         const data = JSON.parse(message.value.toString());
 
-        // 2. Mapear para FHIR
+        // Mapear para FHIR
         const { patient, observation } = toFHIR(data);
 
-        // 3. Buscar paciente por CPF
+        // Buscar paciente por CPF
         const search = await axios.get(
           //`http://hapi-fhir:8080/fhir/Patient?identifier=http://www.saude.gov.br/fhir/r4/NamingSystem/cpf|${data.paciente_cpf}`
           `http://hapi-fhir:8080/fhir/Patient?identifier=${data.paciente_cpf}`
@@ -41,10 +41,10 @@ const runConsumer = async () => {
           console.log("Paciente criado:", patientId);
         }
 
-        // 4. Linkar no exame
+        // Linkar no exame
         observation.subject.reference = `Patient/${patientId}`;
 
-        // 5. Enviar Observation
+        // Enviar Observation
         await axios.post(
           "http://hapi-fhir:8080/fhir/Observation",
           observation

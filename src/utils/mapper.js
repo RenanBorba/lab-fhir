@@ -1,7 +1,9 @@
 function toFHIRBundle(data) {
+  // IDs internos para referenciar recursos dentro do Bundle
   const patientId = `urn:uuid:patient-${data.paciente_id}`;
   const obsId = `urn:uuid:obs-${data.id}`;
 
+  // Recurso Patient
   const patient = {
     resourceType: "Patient",
     meta: {
@@ -18,6 +20,7 @@ function toFHIRBundle(data) {
     name: [{ text: data.paciente_nome }]
   };
 
+  // Recurso Observation (resultado do exame)
   const observation = {
     resourceType: "Observation",
     meta: {
@@ -40,7 +43,7 @@ function toFHIRBundle(data) {
       }]
     },
     subject: {
-      reference: patientId
+      reference: patientId // vínculo com Patient via uuid
     },
     effectiveDateTime: new Date().toISOString(),
     valueQuantity: {
@@ -51,6 +54,7 @@ function toFHIRBundle(data) {
     }
   };
 
+  // Bundle transaction: cria Patient + Observation juntos
   return {
     resourceType: "Bundle",
     type: "transaction",
@@ -61,6 +65,8 @@ function toFHIRBundle(data) {
         request: {
           method: "POST",
           url: "Patient"
+          // Evita duplicidade por CPF, cria apenas se não existir
+          //,ifNoneExist: `identifier=http://www.saude.gov.br/fhir/r4/NamingSystem/cpf|${data.paciente_cpf}`
         }
       },
       {
