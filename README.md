@@ -86,7 +86,7 @@ Utilizei o Docker para conteinerizar os serviços, permitindo isolamento dos com
 
 ### 📄 Banco de Dados
 
-No PostgreSQL, criei uma **estrutura simples** simulando o vínculo entre pacientes e seus exames, representando um cenário real de dados laboratoriais.
+No PostgreSQL, criei uma **estrutura simples** simulando o vínculo entre paciente e seus exames, representando um cenário real de dados laboratoriais.
 
 <img width="1371" height="493" alt="Image" src="https://github.com/user-attachments/assets/b56149e9-62f0-49e8-9d7b-39c516ea89e0" />
 
