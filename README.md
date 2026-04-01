@@ -68,11 +68,11 @@ Quando combinamos FHIR + Kafka + Node.js, criamos um fluxo **assíncrono, escal�
 
 👉 Aplicar validação de profiles RNDS
 
-👉 Implementar autenticação (token)
-
 👉 Versionamento e governança clínica
 
 👉 Implementation Guides (IGs) 
+
+👉 Implementar autenticação (token)
 
 👉 NestJS
 
