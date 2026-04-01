@@ -21,7 +21,7 @@ Quando combinamos FHIR + Kafka + Node.js, criamos um fluxo **assíncrono, escal�
 ## 🔗 Arquitetura construída
 
 - 🗄️ PostgreSQL → origem dos exames
-- 🌐 Node.js + Express + Axios → endpoint `/publish`
+- 🌐 Node.js + Express → endpoint `/publish`
 - 📡 Kafka → mensageria assíncrona
 - 🔄 Consumer → processamento dos dados
 - 🏥 HAPI FHIR → persistência padrão FHIR
@@ -41,7 +41,7 @@ Quando combinamos FHIR + Kafka + Node.js, criamos um fluxo **assíncrono, escal�
 - 🐳 Conteinerização com Docker
 - ⚡ Arquitetura desacoplada com Kafka
 - 📦 Uso de **FHIR Bundle transaction**
-- 🇧🇷 Compatível com padrões da RNDS
+- 🇧🇷 Compatível com padrões da Rede Nacional de Dados em Saúde (RNDS)🕸
 - 🧬 Uso de `meta.profile` (ex: BRResultadoExameLaboratorial)
 - 🔗 Relacionamento entre recursos via `urn:uuid`
 
