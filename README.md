@@ -78,19 +78,19 @@ Quando combinamos FHIR + Kafka + Node.js, criamos um fluxo **assíncrono, escal�
 
 ## 🧠 Mais detalhes técnicos:
 
-#### 📄 Banco de Dados
-
-No PostgreSQL, criei uma **estrutura simples** simulando o vínculo entre pacientes e seus exames, representando um cenário real de dados laboratoriais.
-
-![image.png](attachment:8e3b6f54-7119-43a8-979b-e79181182de1:adc1200d-8020-435f-ac34-0ddf129bf5c1.png)
-
 #### 🏗️ Contêiner
 
 Utilizei o Docker para conteinerizar os serviços, permitindo isolamento dos componentes e consistência entre ambientes de execução.
 
 ![image.png](attachment:bb6386a7-3757-4464-ae82-694568ec3646:image.png)
 
-#### 🔗 Arquitetura (clean e modular)
+#### 📄 Banco de Dados
+
+No PostgreSQL, criei uma **estrutura simples** simulando o vínculo entre pacientes e seus exames, representando um cenário real de dados laboratoriais.
+
+![image.png](attachment:8e3b6f54-7119-43a8-979b-e79181182de1:adc1200d-8020-435f-ac34-0ddf129bf5c1.png)
+
+#### 🔗 Arquitetura em Camadas (clean e modular)
 
 Organizei o projeto em camadas, separando responsabilidades:
 
@@ -233,5 +233,7 @@ Podemos ver claramente que os dados trafegaram de ponta a ponta de forma **inter
 Projetos como esse mostram como tecnologia pode, de fato, **aproximar sistemas e melhorar o cuidado em saúde**.
 
 Se você trabalha com integração, saúde digital ou dados clínicos, vamos trocar ideias! 🚀
+
+<br><br><br><br>
 
 #FHIR #Kafka #NodeJS #Interoperabilidade #SaudeDigital #RNDS #HL7 #DataEngineering #SoftwareArchitecture
