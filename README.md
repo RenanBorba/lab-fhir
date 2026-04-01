@@ -82,19 +82,19 @@ Quando combinamos FHIR + Kafka + Node.js, criamos um fluxo **assíncrono, escal�
 
 Utilizei o Docker para conteinerizar os serviços, permitindo isolamento dos componentes e consistência entre ambientes de execução.
 
-![image.png](attachment:bb6386a7-3757-4464-ae82-694568ec3646:image.png)
+<img width="1270" height="642" alt="Image" src="https://github.com/user-attachments/assets/3eb998e3-be8c-4c9b-a9dd-60b9980ecbd8" />
 
 #### 📄 Banco de Dados
 
 No PostgreSQL, criei uma **estrutura simples** simulando o vínculo entre pacientes e seus exames, representando um cenário real de dados laboratoriais.
 
-![image.png](attachment:8e3b6f54-7119-43a8-979b-e79181182de1:adc1200d-8020-435f-ac34-0ddf129bf5c1.png)
+<img width="1371" height="493" alt="Image" src="https://github.com/user-attachments/assets/b56149e9-62f0-49e8-9d7b-39c516ea89e0" />
 
 #### 🔗 Arquitetura em Camadas (clean e modular)
 
 Organizei o projeto em camadas, separando responsabilidades:
 
-![Sem título5.png](attachment:83883c08-c918-4111-9854-e8de31f9fa8b:Sem_ttulo5.png)
+<img width="185" height="400" alt="Image" src="https://github.com/user-attachments/assets/e95ec260-a90a-4552-8f12-0d1a4543dddd" />
 
 - `api/` → entrada (HTTP / Express)
 - `services/` → acesso ao banco
