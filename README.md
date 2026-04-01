@@ -110,7 +110,7 @@ Organizei o projeto em camadas, separando responsabilidades:
 
 #### 🔹 `src/services/db.js`
 
-Gerencia a conexão com o PostgreSQL.
+O db.js gerencia a conexão com o PostgreSQL.
 
 Função `connectDB` abre a conexão com o banco.
 
@@ -120,9 +120,9 @@ Função `getExames` consulta a tabela `exames`.
 
 #### 🔹 `src/api/server.js`
 
-Cria uma API com **Express** e envia o endpoint `/publish`.
+Criei uma API com **Express** que envia o endpoint `/publish`.
 
-Busca exames no PostgreSQL e envia cada um para o Kafka.
+Ela busca exames no PostgreSQL e envia cada um para o Kafka.
 
 Inicializa o servidor na porta 3000 e conecta ao banco.
 
