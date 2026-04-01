@@ -78,7 +78,7 @@ Quando combinamos FHIR + Kafka + Node.js, criamos um fluxo **assíncrono, escal�
 
 ## 🧠 Mais detalhes técnicos:
 
-### 🏗️ Contêiner
+### 🏗️ Contêineres 
 
 Utilizei o Docker para conteinerizar os serviços, permitindo isolamento dos componentes e consistência entre ambientes de execução.
 
