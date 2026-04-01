@@ -114,7 +114,7 @@ O db.js gerencia a conexão com o PostgreSQL.
 
 Função `connectDB` abre a conexão com o banco.
 
-Função `getExames` consulta a tabela `exames`.
+Já a função `getExames` consulta a tabela `exames`.
 
 <img width="515" height="540" alt="Image" src="https://github.com/user-attachments/assets/ea475ef7-5c96-4356-ba05-87a217ebf044" />
 
@@ -162,7 +162,7 @@ Cria recursos Patient e Observation.
 
 Permite envio único com vínculo interno via `urn:uuid`.
 
-Vale a pena contextualizar o uso do Bundle do tipo transaction, destacando a possibilidade de realizar um único envio contendo múltiplos recursos. Atualmente, a RNDS trabalha com profiles estruturados em Bundle
+Vale a pena contextualizar o uso do Bundle do tipo transaction, destacando a possibilidade de realizar um único envio contendo múltiplos recursos. Atualmente, a RNDS trabalha com profiles estruturados em Bundle.
 
 <img width="881" height="1661" alt="Image" src="https://github.com/user-attachments/assets/24f51912-2859-410b-82a6-aed9e8559ed3" />
 
