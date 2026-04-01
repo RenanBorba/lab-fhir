@@ -108,7 +108,7 @@ Organizei o projeto em camadas, separando responsabilidades:
 
 #### 🔹 `src/api/server.js`
 
-Cria uma API com **Express** e expõe o endpoint `/publish`.
+Cria uma API com **Express** e envia o endpoint `/publish`.
 
 Busca exames no PostgreSQL e envia cada um para o Kafka.
 
@@ -118,7 +118,7 @@ Inicializa o servidor na porta 3000 e conecta ao banco.
 
 #### 🔹 `src/config/kafka.js`
 
-Configura a conexão com o Kafka usando **kafkajs**.
+Configura a conexão com o Kafka.
 
 Define `clientId` e o broker (`kafka:9092` no Docker).
 
@@ -148,7 +148,7 @@ Serializa os dados em JSON antes de enviar.
 
 #### 🔹 `src/services/db.js`
 
-Gerencia a conexão com o PostgreSQL usando `pg`.
+Gerencia a conexão com o PostgreSQL.
 
 Função `connectDB` abre a conexão com o banco.
 
