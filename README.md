@@ -78,19 +78,19 @@ Quando combinamos FHIR + Kafka + Node.js, criamos um fluxo **assíncrono, escal�
 
 ## 🧠 Mais detalhes técnicos:
 
-#### 🏗️ Contêiner
+### 🏗️ Contêiner
 
 Utilizei o Docker para conteinerizar os serviços, permitindo isolamento dos componentes e consistência entre ambientes de execução.
 
 <img width="1270" height="642" alt="Image" src="https://github.com/user-attachments/assets/3eb998e3-be8c-4c9b-a9dd-60b9980ecbd8" />
 
-#### 📄 Banco de Dados
+### 📄 Banco de Dados
 
 No PostgreSQL, criei uma **estrutura simples** simulando o vínculo entre pacientes e seus exames, representando um cenário real de dados laboratoriais.
 
 <img width="1371" height="493" alt="Image" src="https://github.com/user-attachments/assets/b56149e9-62f0-49e8-9d7b-39c516ea89e0" />
 
-#### 🔗 Arquitetura em Camadas (clean e modular)
+### 🔗 Arquitetura em Camadas (clean e modular)
 
 Organizei o projeto em camadas, separando responsabilidades:
 
@@ -104,9 +104,9 @@ Organizei o projeto em camadas, separando responsabilidades:
 
 👉 Isso facilita manutenção, escala e evolução do projeto.
 
-#### 👨‍💻 Codando…
+### 👨‍💻 Codando…
 
-### 🔹 `src/api/server.js`
+#### 🔹 `src/api/server.js`
 
 Cria uma API com **Express** e expõe o endpoint `/publish`.
 
@@ -114,9 +114,9 @@ Busca exames no PostgreSQL e envia cada um para o Kafka.
 
 Inicializa o servidor na porta 3000 e conecta ao banco.
 
-![image.png](attachment:f976a567-6269-4eac-8230-e09bd33ffd4c:image.png)
+<img width="555" height="536" alt="Image" src="https://github.com/user-attachments/assets/11e829de-e6c6-42ec-bbb8-b4b94ec5fe75" />
 
-### 🔹 `src/config/kafka.js`
+#### 🔹 `src/config/kafka.js`
 
 Configura a conexão com o Kafka usando **kafkajs**.
 
@@ -124,9 +124,9 @@ Define `clientId` e o broker (`kafka:9092` no Docker).
 
 Exporta a instância para ser reutilizada no producer e consumer.
 
-![image.png](attachment:c068fff6-9dbb-4661-85db-149cd636fb12:image.png)
+<img width="440" height="251" alt="Image" src="https://github.com/user-attachments/assets/2e83a686-8706-419f-ba2e-bc4271948d33" />
 
-### 🔹 `src/kafka/consumer.js`
+#### 🔹 `src/kafka/consumer.js`
 
 Consome mensagens do tópico `lab-results` no Kafka.
 
@@ -134,9 +134,9 @@ Transforma os dados em Bundle FHIR e envia para o HAPI via HTTP.
 
 Executa o processamento assíncrono com tratamento de erro.
 
-![Sem título.png](attachment:7063dcbe-cc0e-48e5-81c3-08caf6152e41:Sem_ttulo.png)
+<img width="641" height="977" alt="Image" src="https://github.com/user-attachments/assets/bc890e98-9bed-4b80-a8e9-1c637d0cb617" />
 
-### 🔹 `src/kafka/producer.js`
+#### 🔹 `src/kafka/producer.js`
 
 Responsável por enviar mensagens para o Kafka.
 
@@ -144,11 +144,9 @@ Conecta ao broker e publica dados no tópico informado.
 
 Serializa os dados em JSON antes de enviar.
 
-![image.png](attachment:3d1e5b57-b3d0-4d94-a636-412e34bf048c:image.png)
+<img width="575" height="428" alt="Image" src="https://github.com/user-attachments/assets/7379677d-ca1d-4a56-bd07-b61c0df0e31b" />
 
- 
-
-### 🔹 `src/services/db.js`
+#### 🔹 `src/services/db.js`
 
 Gerencia a conexão com o PostgreSQL usando `pg`.
 
@@ -156,9 +154,9 @@ Função `connectDB` abre a conexão com o banco.
 
 Função `getExames` consulta a tabela `exames`.
 
-![image.png](attachment:81f46cc4-3b34-4dcf-83ce-bb935bbcec22:image.png)
+<img width="515" height="540" alt="Image" src="https://github.com/user-attachments/assets/ea475ef7-5c96-4356-ba05-87a217ebf044" />
 
-### 🔹 `src/utils/mapper.js`
+#### 🔹 `src/utils/mapper.js`
 
 Converte dados do banco em um **Bundle FHIR transaction**.
 
@@ -166,7 +164,7 @@ Cria recursos Patient e Observation.
 
 Permite envio único com vínculo interno via `urn:uuid`.
 
-![Sem título2.png](attachment:2436e9b3-6395-4400-b3d9-997a9c80bf96:36d04b6d-b9e9-447b-b43a-889aa3ce1102.png)
+<img width="881" height="1661" alt="Image" src="https://github.com/user-attachments/assets/24f51912-2859-410b-82a6-aed9e8559ed3" />
 
 ## 🔄 Fluxo completo da aplicação
 
@@ -206,15 +204,17 @@ Permite envio único com vínculo interno via `urn:uuid`.
 
 Ao executar o comando “`curl -X POST http://localhost:3000/publish"`, a API respondeu com “Dados enviados para Kafka”, conforme implementado no `server.js`. Em seguida, nos logs do Docker, foi possível observar o envio das mensagens — “Enviado para Kafka: PCR (e IGG)” — de acordo com o `producer.js`.
 
-![image.png](attachment:36f873a0-9b93-41f9-91b4-79502f797b90:image.png)
+<img width="683" height="33" alt="Image" src="https://github.com/user-attachments/assets/96fd41a8-eee1-419b-8c1b-9b4d521b7caa" />
 
-![image.png](attachment:521512a3-431a-4b41-aedc-ad87f5f2add1:image.png)
+<img width="683" height="102" alt="Image" src="https://github.com/user-attachments/assets/0ef96722-72e6-4ece-af7a-de3f51bd6793" />
 
 No Insomnia, é possível realizar requisições GET para os recursos Patient e Observation separadamente, evidenciando os dados persistidos a partir de um único Bundle enviado.
 
-![Sem título4.PNG](attachment:1dcf2959-4f8f-4ec1-844d-62c284f8c34c:Sem_ttulo4.png)
+<img width="1262" height="1028" alt="Image" src="https://github.com/user-attachments/assets/0932d696-41c8-4f82-b1ef-8ee7c6094bd1" />
 
-![Sem título3.png](attachment:ba2487bd-32e7-42f2-9369-424465f244de:Sem_ttulo3.png)
+<br>
+
+<img width="1260" height="2084" alt="Image" src="https://github.com/user-attachments/assets/3024a069-f2ae-447b-baaf-5a169a09fff8" />
 
 ## 🎯 Conclusão
 
