@@ -130,7 +130,7 @@ Inicializa o servidor na porta 3000 e conecta ao banco.
 
 #### 🔹 `src/config/kafka.js`
 
-Configura a conexão com o Kafka.
+O arquivo de configuração do Kafka configura a conexão do serviço.
 
 Define `clientId` e o broker (`kafka:9092` no Docker).
 
@@ -140,31 +140,29 @@ Exporta a instância para ser reutilizada no producer e consumer.
 
 #### 🔹 `src/kafka/consumer.js`
 
-Consome mensagens do tópico `lab-results` no Kafka.
+O consumer.js consome mensagens do tópico `lab-results` no Kafka.
 
 Transforma os dados em Bundle FHIR e envia para o HAPI via HTTP.
-
-Executa o processamento assíncrono com tratamento de erro.
 
 <img width="641" height="977" alt="Image" src="https://github.com/user-attachments/assets/bc890e98-9bed-4b80-a8e9-1c637d0cb617" />
 
 #### 🔹 `src/kafka/producer.js`
 
-Responsável por enviar mensagens para o Kafka.
+O producer.js é responsável por enviar mensagens para o Kafka.
 
-Conecta ao broker e publica dados no tópico informado.
-
-Serializa os dados em JSON antes de enviar.
+Conecta ao broker e publica dados no tópico informado. Também serializa os dados em JSON antes de enviar.
 
 <img width="575" height="428" alt="Image" src="https://github.com/user-attachments/assets/7379677d-ca1d-4a56-bd07-b61c0df0e31b" />
 
 #### 🔹 `src/utils/mapper.js`
 
-Converte dados do banco em um **Bundle FHIR transaction**.
+O mapper.js converte dados do banco em um **Bundle FHIR transaction**.
 
 Cria recursos Patient e Observation.
 
 Permite envio único com vínculo interno via `urn:uuid`.
+
+Vale a pena contextualizar o uso do Bundle do tipo transaction, destacando a possibilidade de realizar um único envio contendo múltiplos recursos. Atualmente, a RNDS trabalha com profiles estruturados em Bundle
 
 <img width="881" height="1661" alt="Image" src="https://github.com/user-attachments/assets/24f51912-2859-410b-82a6-aed9e8559ed3" />
 
