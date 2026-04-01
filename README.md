@@ -6,7 +6,7 @@
 
 Nos últimos dias montei um fluxo completo de integração focado em interoperabilidade em saúde — **saindo do dado bruto até um servidor FHIR**.
 
-💡 O **HL7 FHIR** funciona como um grande “Lego da saúde” 🧩 — organiza dados clínicos em recursos padronizados, reutilizáveis e conectáveis, utilizando HTTP para permitir comunicação ágil entre sistemas.
+💡 O **HL7 FHIR**🔥 funciona como um grande “Lego da saúde” 🧩 — organiza dados clínicos em recursos padronizados, reutilizáveis e conectáveis, utilizando HTTP para permitir comunicação ágil entre sistemas.
 
 ## **🤔 Por que isso importa?**
 
