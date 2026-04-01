@@ -108,6 +108,16 @@ Organizei o projeto em camadas, separando responsabilidades:
 
 ### 👨‍💻 Codando…
 
+#### 🔹 `src/services/db.js`
+
+Gerencia a conexão com o PostgreSQL.
+
+Função `connectDB` abre a conexão com o banco.
+
+Função `getExames` consulta a tabela `exames`.
+
+<img width="515" height="540" alt="Image" src="https://github.com/user-attachments/assets/ea475ef7-5c96-4356-ba05-87a217ebf044" />
+
 #### 🔹 `src/api/server.js`
 
 Cria uma API com **Express** e envia o endpoint `/publish`.
@@ -147,16 +157,6 @@ Conecta ao broker e publica dados no tópico informado.
 Serializa os dados em JSON antes de enviar.
 
 <img width="575" height="428" alt="Image" src="https://github.com/user-attachments/assets/7379677d-ca1d-4a56-bd07-b61c0df0e31b" />
-
-#### 🔹 `src/services/db.js`
-
-Gerencia a conexão com o PostgreSQL.
-
-Função `connectDB` abre a conexão com o banco.
-
-Função `getExames` consulta a tabela `exames`.
-
-<img width="515" height="540" alt="Image" src="https://github.com/user-attachments/assets/ea475ef7-5c96-4356-ba05-87a217ebf044" />
 
 #### 🔹 `src/utils/mapper.js`
 
