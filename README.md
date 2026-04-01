@@ -212,7 +212,6 @@ No Insomnia, é possível realizar requisições GET para os recursos Patient e 
 
 <img width="1262" height="1028" alt="Image" src="https://github.com/user-attachments/assets/0932d696-41c8-4f82-b1ef-8ee7c6094bd1" />
 
-<br>
 
 <img width="1260" height="2084" alt="Image" src="https://github.com/user-attachments/assets/3024a069-f2ae-447b-baaf-5a169a09fff8" />
 
