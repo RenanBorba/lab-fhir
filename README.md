@@ -72,7 +72,7 @@ Quando combinamos FHIR + Kafka + Node.js, criamos um fluxo **assíncrono, escal�
 
 👉 Implementation Guides (IGs) 
 
-👉 Implementar camada de segurança utilizando variáveis de ambiente (.env)
+👉 Implementar camada de segurança com variáveis de ambiente (.env)
 
 👉 Implementar autenticação (token)
 
