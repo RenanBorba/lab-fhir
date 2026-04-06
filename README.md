@@ -200,7 +200,7 @@ Vale a pena contextualizar o uso do Bundle do tipo transaction, destacando a pos
   Patient + Observation (persistidos)
 ```
 
-## 🔄 Resultados finais
+## 📈 Resultados finais
 
 Ao executar o comando “`curl -X POST http://localhost:3000/publish"`, a API respondeu com “Dados enviados para Kafka”, conforme implementado no `server.js`. Em seguida, nos logs do Docker, foi possível observar o envio das mensagens — “Enviado para Kafka: PCR (e IGG)” — de acordo com o `producer.js`.
 
